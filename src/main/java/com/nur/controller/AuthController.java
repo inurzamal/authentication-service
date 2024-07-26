@@ -38,7 +38,7 @@ public class AuthController {
         return ResponseEntity.ok(msg);
     }
 
-    @PostMapping("/authenticate")
+    @PostMapping("/token")
     public ResponseEntity<String> authenticateAndGetToken(@RequestBody UserLoginDto userLoginDto) {
         try {
             LOGGER.debug("Authenticating user: {}", userLoginDto.getUsername());
